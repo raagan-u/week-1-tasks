@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Open+Sans:wdth,wght@75..100,300..800&display=swap');
 header {
 	display: flex;
 	justify-content: center;
@@ -6,7 +7,6 @@ header {
 	padding: 20px;
   
 	.logo {
-	  background-color: blue;
 	  display: flex;
 	  width: 120px;
 	  height: 120px;
@@ -14,7 +14,6 @@ header {
 	}
   
 	.title-text {
-	  background-color: red;
 	  display: flex;
 	}  
 }
@@ -24,6 +23,7 @@ header {
 	width: 100%; 
 	height: 100%;
 	background-image: url("assets/4a5201a568ff48e8c37440e3b0ea754f.jpeg");
+	background-color: (109, 83, 87, 0.5);
 	background-repeat: no-repeat;
 	background-position: center; 
 	background-size: cover;
@@ -31,11 +31,42 @@ header {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+
+	.welcome-card-container{
+		padding: 80px 0px 80px 0px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.main-text {
+		text-align: center;
+		font-family: "Mulish", sans-serif;
+		font-weight: 800;
+		color: white;
+		font-size: 48px;
+	}
+
+	.sub-text {
+		font-family: "Open Sans", sans-serif;
+		font-size: 18px;
+		color: white;
+		font-weight: 700;
+	}
   }
 
   .inputs {
 	display: flex;
 	flex-direction: row;
+	
+	button {
+		background: rgba(246, 76, 114, 1);
+		color: white;
+		font-family: "Mulish", sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		padding: 16px 36px;
+		border-radius: 2px;
+	}
   }
 
   .navbar {
@@ -43,19 +74,20 @@ header {
 	align-items: center;
 	justify-content: center;
 	padding: 0;
-	background-color: rgba(255, 0, 0);
 	position: relative;
 
 	.navbar-menu {
-	  list-style: none;
-	  display: flex;
-	  padding: 0;
-	  margin: 0;
-	  background-color: rgba(0, 255, 0);
+		font-family: "Open Sans", sans-serif;
+		font-weight: 400px;
+		font-size: 20px;
+		list-style: none;
+		display: flex;
+		padding: 0;
+		margin: 0;
 
-	  li {
-		padding: 0 20px;
-	  }
+		li {
+			padding: 0 20px;
+		}
 	}
-  }
+}
   
