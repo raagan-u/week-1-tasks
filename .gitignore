@@ -1,7 +1,7 @@
 # Ignore compiled CSS files
 *.css
 *.css.map
-
+stylesheet.css
 # Ignore Sass/SCSS cache files
 .sass-cache/
 *.sass-cache/
