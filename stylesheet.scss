@@ -208,11 +208,20 @@ body {
 
 		&#three-cards {
 			display: flex;
-			flex-direction: row;
-			margin: 20px;
+			margin:  20px auto;
+			position: relative;
+			flex-flow: column wrap;
+			
+			.cards-container {
+				width: 75%;
+				.card {
+					background-color: white;
+				}
+			}
 		}
 
 		&#achievements {
+			margin-top: -80px;
 			height: 50%;
 			background-color: rgba(246, 76, 114, 1);
 
