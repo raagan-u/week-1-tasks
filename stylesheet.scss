@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Open+Sans:wdth,wght@75..100,300..800&display=swap');
+* {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
 header {
 	display: flex;
 	justify-content: center;
@@ -17,57 +24,6 @@ header {
 	  display: flex;
 	}  
 }
-
-
-.welcome-card {
-	width: 100%; 
-	height: 100%;
-	background-image: url("assets/4a5201a568ff48e8c37440e3b0ea754f.jpeg");
-	background-color: (109, 83, 87, 0.5);
-	background-repeat: no-repeat;
-	background-position: center; 
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-
-	.welcome-card-container{
-		padding: 80px 0px 80px 0px;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.main-text {
-		text-align: center;
-		font-family: "Mulish", sans-serif;
-		font-weight: 800;
-		color: white;
-		font-size: 48px;
-	}
-
-	.sub-text {
-		font-family: "Open Sans", sans-serif;
-		font-size: 18px;
-		color: white;
-		font-weight: 700;
-	}
-  }
-
-  .inputs {
-	display: flex;
-	flex-direction: row;
-	
-	button {
-		background: rgba(246, 76, 114, 1);
-		color: white;
-		font-family: "Mulish", sans-serif;
-		font-weight: 700;
-		font-size: 16px;
-		padding: 16px 36px;
-		border-radius: 2px;
-	}
-  }
 
   .navbar {
 	display: flex;
@@ -90,4 +46,243 @@ header {
 		}
 	}
 }
-  
+
+
+
+
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+
+		&#welcome-card {
+			width: 100%; 
+			height: 65%;
+			background-image: linear-gradient(rgba(109, 83, 87, 0.5),rgba(109, 83, 87, 0.5)), url("assets/4a5201a568ff48e8c37440e3b0ea754f.jpeg");
+			background-repeat: no-repeat;
+			background-position: center; 
+			background-size: cover;
+			.welcome-card-container{
+				display: flex;
+				flex-direction: column;
+				padding: 80px 0px 80px 0px;
+				align-items: center;
+				justify-content: center;
+
+				.main-text {
+					width: 55%;
+					text-align: center;
+					font-family: "Mulish", sans-serif;
+					font-weight: 800;
+					color: white;
+					font-size: 48px;
+				}
+				
+				.sub-text {
+					text-align: center;
+					width: 47%;
+					font-family: "Open Sans", sans-serif;
+					font-size: 18px;
+					color: white;
+					font-weight: 700;
+				}
+				.inputs {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					
+
+					input {
+						height: 100%;
+						width: 35%; // Makes the input take up the full width of its container
+						max-width: 500px; // Limits the width of the input field
+						padding: 12px 16px; // Padding inside the input field
+						font-family: "Mulish", sans-serif;
+						font-size: 16px;
+						border-radius: 2px;
+						border: 1px solid #ccc;
+					}
+					
+					button {
+						height: 100%;
+						margin-left: 10px;
+						text-align: center;
+						background: rgba(246, 76, 114, 1);
+						color: white;
+						font-family: "Mulish", sans-serif;
+						font-weight: 700;
+						font-size: 16px;
+						padding: 16px 36px;
+						border-radius: 2px;
+						border: none; // Removes the border
+						cursor: pointer; // Adds a pointer cursor on hover
+						min-width: 165px; // Ensure a consistent button width
+						min-height: 56px; // Ensures the button has consistent height
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+				
+					button:hover {
+						background: rgba(246, 76, 114, 0.8); // Slightly darker background on hover
+					}
+				  }
+			}
+		}
+
+		&#about {
+			background-color: white;
+			margin: -50px auto 20px;
+			padding: 10px;
+			width: 65%;
+			height: auto;
+			text-align: center;
+			padding: 30px;
+			font-family: "Mulish", sans-serif;
+			font-weight: 400;
+			font-size: 48px	;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+			h1 {
+				font-size: 36px;
+				color: #5a4b5d;
+				margin-bottom: 20px;
+			}
+		
+			.line-container {
+				position: relative;
+				margin-bottom: 20px;
+		
+				.line {
+					display: block;
+					height: 2px;
+					width: 60px;
+					background-color: #5a4b5d;
+					margin: 0 auto;
+				}
+			}
+		
+			p {
+				font-size: 16px;
+				color: #6c6f7a;
+				line-height: 1.8;
+				margin-bottom: 40px;
+			}
+		
+			.values {
+				display: flex;
+				justify-content: center;
+				gap: 40px;
+				font-size: 16px;
+				font-weight: 700;
+				color: #5a4b5d;
+				
+				span {
+					position: relative;
+					display: inline-block;
+					padding-left: 25px;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+		
+				span::before {
+					content: "✔";
+					position: absolute;
+					left: 0;
+					top: 0;
+					font-size: 18px;
+					color: #f64c72;
+				}
+			}
+
+		}
+
+		&#three-cards {
+			display: flex;
+			flex-direction: row;
+			margin: 20px;
+		}
+
+		&#achievements {
+			height: 50%;
+			background-color: rgba(246, 76, 114, 1);
+
+		}
+
+		&#what-do-we-do {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 20px;
+			padding: 20px;
+			
+		}
+
+		&#mission {
+			.cards-container {
+				width: 100%;
+				height: auto;
+				overflow: hidden;
+				.image-card {
+					flex: 1;
+				}
+				.image-card img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				.card {
+					flex: 1;
+				}
+			}
+		}
+
+		&#review {
+			background-color: rgb(63, 63, 141);
+		}
+
+		&#team {
+			background-color: rgb(6, 12, 24);
+		}
+
+		&#work {
+			background-color: yellow;
+			height: 396px;
+		}
+	}
+	.cards-container {
+		display: flex;
+		flex-direction: row;
+		flex: wrap;
+		justify-content: space-between;
+		gap: 20px;
+		
+	}
+	.card{
+		height: 367px;
+		margin: 20px;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		width: calc(33.33% - 20px);
+		flex: 1 1 calc(33.33% - 20px); /* Each card takes 1/3 of the width minus gap */
+		max-width: calc(33.33% - 20px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	}	
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* Each card takes full width */
+        max-width: 100%; /* Prevents stretching */
+    }
+}
