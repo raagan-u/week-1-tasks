@@ -1,464 +1,567 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Open+Sans:wdth,wght@75..100,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Open+Sans:wdth,wght@75..100,300..800&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.25rem;
-  
-  .logo {
     display: flex;
-    width: 7.5rem; 
-    height: 7.5rem; 
-    overflow: hidden;
-  }
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
 
-  .title-text {
-    display: flex;
-  }
+    .logo {
+        display: flex;
+        width: 7.5rem;
+        height: 7.5rem;
+        overflow: hidden;
+    }
+
+    .title-text {
+        display: flex;
+    }
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  position: relative;
-
-  .navbar-menu {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400; 
-    font-size: 1.25rem;
-    list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
-
-    li {
-      padding: 0 1.25rem;
-    }
-  }
-}
-html, body {
-	overflow-x: hidden;
-  }
-body {
-  display: flex;
-  flex-direction: column;
-
-  section {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    position: relative;
 
-    &#welcome-card {
-      width: 100%;
-      height: 65vh; 
-      background-image: linear-gradient(
-          rgba(109, 83, 87, 0.5),
-          rgba(109, 83, 87, 0.5)
-        ),
-        url("assets/4a5201a568ff48e8c37440e3b0ea754f.jpeg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-
-      .welcome-card-container {
+    .navbar-menu {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 1.25rem;
+        list-style: none;
         display: flex;
-        flex-direction: column;
-        padding: 5rem 0; 
-        align-items: center;
-        justify-content: center;
-
-        .main-text {
-          width: 55%;
-          text-align: center;
-          font-family: "Mulish", sans-serif;
-          font-weight: 800;
-          color: white;
-          font-size: 3rem; 
-        }
-
-        .sub-text {
-          text-align: center;
-          width: 47%;
-          font-family: "Open Sans", sans-serif;
-          font-size: 1.125rem; 
-          color: white;
-          font-weight: 700;
-        }
-
-        .inputs {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-
-          input {
-            height: 100%;
-            width: 35%;
-            max-width: 31.25rem; 
-            padding: 0.75rem 1rem; 
-            font-family: "Mulish", sans-serif;
-            font-size: 1rem; 
-            border-radius: 0.125rem; 
-            border: 1px solid #ccc;
-          }
-
-          button {
-            height: 100%;
-            margin-left: 0.625rem; 
-            text-align: center;
-            background: rgba(246, 76, 114, 1);
-            color: white;
-            font-family: "Mulish", sans-serif;
-            font-weight: 700;
-            font-size: 1rem; 
-            padding: 1rem 2.25rem;
-            border-radius: 0.125rem;
-            border: none;
-            cursor: pointer;
-            min-width: 10.3125rem; 
-            min-height: 3.5rem; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          button:hover {
-            background: rgba(246, 76, 114, 0.8);
-          }
-        }
-      }
-    }
-
-    &#about {
-      background-color: white;
-      margin: -3.125rem auto 1.25rem; 
-      padding: 1.875rem;
-      width: 65%;
-      text-align: center;
-      font-family: "Mulish", sans-serif;
-      font-weight: 400;
-      font-size: 3rem; 
-      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-
-      h1 {
-        font-size: 2.25rem; 
-        color: #5a4b5d;
-        margin-bottom: 1.25rem; 
-      }
-
-      .line-container {
-        position: relative;
-        margin-bottom: 1.25rem; 
-
-        .line {
-          display: block;
-          height: 0.125rem;
-          width: 3.75rem; 
-          background-color: #5a4b5d;
-          margin: 0 auto;
-        }
-      }
-
-      p {
-        font-size: 1rem; 
-        color: #6c6f7a;
-        line-height: 1.8;
-        margin-bottom: 2.5rem; 
-      }
-
-      .values {
-        display: flex;
-        justify-content: center;
-        gap: 2.5rem; 
-        font-size: 1rem; 
-        font-weight: 700;
-        color: #5a4b5d;
-
-        span {
-          position: relative;
-          display: inline-block;
-          padding-left: 1.5625rem;
-          text-transform: uppercase;
-          font-weight: 700;
-        }
-
-        span::before {
-          content: "✔";
-          position: absolute;
-          left: 0;
-          top: 0;
-          font-size: 1.125rem;
-          color: #f64c72;
-        }
-      }
-    }
-    
-	&#three-cards {
-		display: flex;
-		margin:  1.25rem;
-		position: relative;
-		width: 100%;
-		.cards-container {
-      width: 100%;
-			.card {
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-				background-color: white;
-        height: 296px;
-        width: 367px;
-        h2 {
-          font-size: 1.625rem;
-          font-family: 'Mullish', sans-serif;
-          font-weight: 400;
-          color:#553D67;
-        }
-        p {
-          width: 100%;
-          font-size: 18px;
-          font-weight: 400;
-          font-family: "Open Sans";
-        }
-        
-			}
-		}
-	}
-
-	&#achievements {
-		margin-top: -7rem;
-		height: 50%;
-		background-color: rgba(246, 76, 114, 1);
-    color: white;
-  
-    .head {
-      font-size: 2.5rem;
-      font-family: "Mullish", sans-serif;
-      font-weight: 700;
-    }
-    p {
-      font-family: "Open Sans";
-      font-weight: 600;
-      font-size: 1.125rem;
-      width: 38%;
-      text-align: center;
-    }
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      
-      li {
-        .num {
-          font-family: "Mullish", sans-serif;
-          font-weight: 800;
-          font-size: 2.5rem;
-        }
-        .subtext {
-          font-size: 0.875rem;
-          font-weight: 600;
-          font-family: 'Open Sans';
-        }
-
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        padding: 60px;
-      }
-    }
-	}
-	&#what-do-we-do {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 1.25rem;
-		padding: 1.25rem;
-    
-      .card {
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-				background-color: white;
-        width: 367px;
-        height: 395px;
-        h2 {
-          font-size: 1.625rem;
-          font-family: 'Mullish', sans-serif;
-          font-weight: 400;
-          color:#553D67;
-        }
-        p {
-          width: 100%;
-          font-size: 18px;
-          font-weight: 400;
-          font-family: "Open Sans";
-        }
-        
-    }
-		
-	}
-
-	&#mission {
-		.cards-container {
-      gap: 0;
-			width: 100%;
-			overflow: hidden;
-			.image-card {
-				flex: 1;
-			}
-			.image-card img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-			.card {
-        background-color: #f64c72;
-        color: white;
-        margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
-				flex: 1;
+        margin: 0;
+
+        li {
+            padding: 0 1.25rem;
+        }
+    }
+}
+html,
+body {
+    overflow-x: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+
+    section {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+
+        &#welcome-card {
+            width: 100%;
+            height: 65vh;
+            background-image:
+                linear-gradient(rgba(109, 83, 87, 0.5), rgba(109, 83, 87, 0.5)),
+                url("assets/4a5201a568ff48e8c37440e3b0ea754f.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .welcome-card-container {
+                display: flex;
+                flex-direction: column;
+                padding: 5rem 0;
+                align-items: center;
+                justify-content: center;
+
+                .main-text {
+                    width: 55%;
+                    text-align: center;
+                    font-family: "Mulish", sans-serif;
+                    font-weight: 800;
+                    color: white;
+                    font-size: 3rem;
+                }
+
+                .sub-text {
+                    text-align: center;
+                    width: 47%;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 1.125rem;
+                    color: white;
+                    font-weight: 700;
+                }
+
+                .inputs {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+
+                    input {
+                        height: 100%;
+                        width: 35%;
+                        max-width: 31.25rem;
+                        padding: 0.75rem 1rem;
+                        font-family: "Mulish", sans-serif;
+                        font-size: 1rem;
+                        border-radius: 0.125rem;
+                        border: 1px solid #ccc;
+                    }
+
+                    button {
+                        height: 100%;
+                        margin-left: 0.625rem;
+                        text-align: center;
+                        background: rgba(246, 76, 114, 1);
+                        color: white;
+                        font-family: "Mulish", sans-serif;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        padding: 1rem 2.25rem;
+                        border-radius: 0.125rem;
+                        border: none;
+                        cursor: pointer;
+                        min-width: 10.3125rem;
+                        min-height: 3.5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    button:hover {
+                        background: rgba(246, 76, 114, 0.8);
+                    }
+                }
+            }
+        }
+
+        &#about {
+            background-color: white;
+            margin: -3.125rem auto 1.25rem;
+            padding: 1.875rem;
+            width: 65%;
+            text-align: center;
+            font-family: "Mulish", sans-serif;
+            font-weight: 400;
+            font-size: 3rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+
+            h1 {
+                font-size: 2.25rem;
+                color: #5a4b5d;
+                margin-bottom: 1.25rem;
+            }
+
+            .line-container {
+                position: relative;
+                margin-bottom: 1.25rem;
+
+                .line {
+                    display: block;
+                    height: 0.125rem;
+                    width: 3.75rem;
+                    background-color: #5a4b5d;
+                    margin: 0 auto;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                color: #6c6f7a;
+                line-height: 1.8;
+                margin-bottom: 2.5rem;
+            }
+
+            .values {
+                display: flex;
+                justify-content: center;
+                gap: 2.5rem;
+                font-size: 1rem;
+                font-weight: 700;
+                color: #5a4b5d;
+
+                span {
+                    position: relative;
+                    display: inline-block;
+                    padding-left: 1.5625rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+
+                span::before {
+                    content: "✔";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    font-size: 1.125rem;
+                    color: #f64c72;
+                }
+            }
+        }
+
+        &#three-cards {
+            display: flex;
+            margin: 1.25rem;
+            position: relative;
+            width: 100%;
+            .cards-container {
+                width: 100%;
+                .card {
+                    align-content: center;
+                    justify-content: center;
+                    text-align: center;
+                    background-color: white;
+                    height: 296px;
+                    width: 367px;
+                    h2 {
+                        font-size: 1.625rem;
+                        font-family: "Mullish", sans-serif;
+                        font-weight: 400;
+                        color: #553d67;
+                    }
+                    p {
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-family: "Open Sans";
+                    }
+                }
+            }
+        }
+
+        &#achievements {
+            margin-top: -7rem;
+            height: 50%;
+            background-color: rgba(246, 76, 114, 1);
+            color: white;
+
+            .head {
+                font-size: 2.5rem;
+                font-family: "Mullish", sans-serif;
+                font-weight: 700;
+            }
+            p {
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 1.125re m;
+                width: 38%;
+                text-align: center;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+
+                li {
+                    .num {
+                        font-family: "Mullish", sans-serif;
+                        font-weight: 800;
+                        font-size: 2.5rem;
+                    }
+                    .subtext {
+                        font-size: 0.875rem;
+                        font-weight: 600;
+                        font-family: "Open Sans";
+                    }
+
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 60px;
+                }
+            }
+        }
+        &#what-do-we-do {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1.25rem;
+            padding: 1.25rem;
+
+            .card {
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+                background-color: white;
+                width: 367px;
+                height: 395px;
+                h2 {
+                    font-size: 1.625rem;
+                    font-family: "Mullish", sans-serif;
+                    font-weight: 400;
+                    color: #553d67;
+                }
+                p {
+                    width: 100%;
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: "Open Sans";
+                }
+            }
+        }
+
+        &#mission {
+            .cards-container {
+                gap: 0;
+                width: 100%;
+                overflow: hidden;
+                .image-card {
+                    flex: 1;
+                }
+                .image-card img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .card {
+                    background-color: #f64c72;
+                    color: white;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    flex: 1;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    display: flex;
+                    gap: 25px;
+                    h2 {
+                        font-family: "Mullish", sans-serif;
+                        font-weight: 700;
+                        font-size: 45.75px;
+                    }
+                    p {
+                        font-family: "Mullish", sans-serif;
+                        font-weight: 600;
+                        font-size: 20.59px;
+                        text-align: center;
+                        width: 70%;
+                    }
+                    button {
+                        background-color: #f64c72;
+                        color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                        height: 40px;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+
+        &#team {
+            display: flex;
+            align-items: center;
+            margin-top: 100px;
+
+            .head {
+                font-family: "Mulish", sans-serif;
+                font-weight: 400;
+                font-size: 48px;
+                margin-bottom: 1.5rem;
+            }
+
+            .cards-container {
+                flex-wrap: nowrap; // Prevent wrapping by default
+                gap: 1.5rem; // Space between cards
+                overflow-x: auto; // Allow scrolling if necessary
+                padding-bottom: 1rem;
+
+                .card {
+                    flex: 0 0 auto; // Keep all cards the same width
+                    text-align: left;
+                    width: 20rem;
+                    height: 38rem;
+                    box-shadow: 0px 6.64px 9.96px 0px rgba(101, 90, 90, 0.25);
+                    margin-bottom: 20px;
+                    background-color: var(--bg-col);
+                    border-radius: 10px;
+                    overflow: hidden;
+
+                    h6 {
+                        text-align: left;
+                        margin: 0.85rem 1.327rem 3.14rem 1.327rem;
+                        color: #697694;
+                        font-size: var(--font-smallest);
+                        font-weight: 400;
+                        line-height: 1.74rem;
+                    }
+                }
+
+                .info {
+                    margin-top: 2rem;
+                }
+
+                #name {
+                    padding-left: 1.327rem;
+                    font-weight: 600;
+                    font-size: var(--font-small);
+                    line-height: 2rem;
+                    color: var(--purple);
+                }
+
+                #role {
+                    padding-left: 1.327rem;
+                    color: var(--grey);
+                    font-size: var(--font-smallest);
+                    line-height: 1.4rem;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &#review {
+            .feedback {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+
+                h6 {
+                    text-align: left;
+                    font-size: var(--font-smaller);
+                    font-weight: 400;
+                    margin: 2.27rem 0 0 0;
+                }
+            }
+
+            .feedbackContainer {
+                display: flex;
+                gap: 2.5rem;
+                overflow-x: auto;
+                padding: 1rem;
+                padding-bottom: 1rem;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                max-width: 80vw;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                & {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+
+                .feedbackCard {
+                    scroll-snap-align: start;
+                    min-width: 308px;
+                    flex-shrink: 0;
+                }
+                .feedbackCard {
+                    flex: 0 0 auto;
+                    margin: 0 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: 38rem;
+                    width: 30.8rem;
+                    padding: 6rem 0 0 3.86rem;
+                    box-shadow: 0px 1rem 1.5rem 0px #655a5a40;
+                    background-color: var(--bg-col);
+                    
+                    .profile {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 0;
+                        gap: 1.54rem;
+                        margin-top: 3rem;
+        
+                        p {
+                            font-size: var(--font-smaller);
+                            font-weight: 600;
+                            color: var(--grey);
+                        }
+        
+                        span {
+                            font-size: 0.8em;
+                            font-weight: 400;
+                            line-height: 1.769em;
+                        }
+                    }
+                }
+            }
+        }
+
+        &#work {
+            height: 24.75rem;
+            margin-top: 7rem;
+            margin-bottom: 20px;
+            height: 50%;
+            background-color: rgba(246, 76, 114, 1);
+            color: white;
+            justify-content: space-evenly;
+
+            .head {
+                font-size: 2.5rem;
+                font-family: "Mullish", sans-serif;
+                font-weight: 700;
+            }
+            p {
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 1.125rem;
+                width: 38%;
+                text-align: center;
+            }
+            input {
+                width: 35%;
+                max-width: 31.25rem;
+                padding: 0.75rem 1rem;
+                font-family: "Mulish", sans-serif;
+                font-size: 1rem;
+                border-radius: 0.125rem;
+                border: 1px solid #ccc;
+            }
+        }
+    }
+
+    .cards-container {
         display: flex;
-        gap: 25px;
-        h2 {
-          font-family: "Mullish", sans-serif;
-          font-weight: 700;
-          font-size: 45.75px;
-        }
-        p {
-          font-family: "Mullish", sans-serif;
-          font-weight: 600;
-          font-size: 20.59px;
-          text-align: center;
-          width: 70%;
-        }
-        button {
-          background-color: #f64c72;
-          color: white;
-          border: 1px solid white;
-          border-radius: 5px;
-          height: 40px;
-          width: 100px;
-        }
-			}
-		}
-	}
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+    }
 
-  &#team {
-    margin-top: 100px;
     .card {
-      width: 347px;
-      height: 468px;
-
+        height: 22.9375rem;
+        margin: 1.25rem;
+        padding: 1.25rem;
+        box-sizing: border-box;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-    .head {
-      font-family: "Mullish", sans-serif;
-      font-weight: 400;
-      font-size: 48px;
-    }
-	}
-
-	&#review {
-    margin-top: 100px;
-    .card {
-      width: 347px;
-      height: 458px;
-
-    }
-    .head {
-      font-family: "Mullish", sans-serif;
-      font-weight: 400;
-      font-size: 48px;
-    }
-	}
-
-	
-
-	&#work {
-		height: 24.75rem;
-    margin-top: 7rem;
-    margin-bottom: 20px;
-		height: 50%;
-		background-color: rgba(246, 76, 114, 1);
-    color: white;
-    justify-content: space-evenly;
-  
-    .head {
-      font-size: 2.5rem;
-      font-family: "Mullish", sans-serif;
-      font-weight: 700;
-    }
-    p {
-      font-family: "Open Sans";
-      font-weight: 600;
-      font-size: 1.125rem;
-      width: 38%;
-      text-align: center;
-    }
-    input {
-      width: 35%;
-      max-width: 31.25rem; 
-      padding: 0.75rem 1rem; 
-      font-family: "Mulish", sans-serif;
-      font-size: 1rem; 
-      border-radius: 0.125rem; 
-      border: 1px solid #ccc;
-    } 
-	}
-  }
-
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-	  flex-direction: row;
-    justify-content: center;
-	  align-items: center;
-    gap: 1.25rem;
-  }
-
-  .card {
-    height: 22.9375rem; 
-    margin: 1.25rem; 
-    padding: 1.25rem;
-	  box-sizing: border-box;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
-  }
 }
 
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px 50px;
-  ul {
     display: flex;
-    list-style: none;
     flex-direction: row;
-    li {
-      padding-left: 3px;
+    justify-content: space-between;
+    padding: 20px 50px;
+    ul {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        li {
+            padding-left: 3px;
+        }
     }
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
